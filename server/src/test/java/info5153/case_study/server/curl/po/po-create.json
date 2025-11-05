@@ -1,0 +1,19 @@
+{
+    "ID": 0,
+    "vendorId": 4,
+    "date": "",
+    "items": [
+        {
+            "ID": 0,
+            "poId": 0,
+            "productId": "P-01",
+            "quantity": 10
+        },
+        {
+            "ID": 0,
+            "poId": 0,
+            "productId": "P-02",
+            "quantity": 5
+        }
+    ]
+}

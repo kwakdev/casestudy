@@ -1,0 +1,95 @@
+<form [formGroup]="productForm">
+
+  <mat-accordion>
+
+    <mat-expansion-panel expanded>
+
+      <mat-expansion-panel-header>
+        <mat-panel-title> Product Information </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>ID</mat-label>
+        <input matInput  formControlName="id"  />
+
+        </mat-form-field>
+      </div>
+
+      <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>Vendor</mat-label>
+        <input matInput  formControlName="vendorId"  />
+
+        </mat-form-field>
+      </div>
+      <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>Name</mat-label>
+        <input matInput  formControlName="name"  />
+
+        </mat-form-field>
+      </div>
+      <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>MSRP</mat-label>
+        <input matInput  formControlName="msrp"  />
+
+        </mat-form-field>
+      </div>
+
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel>
+
+      <mat-expansion-panel-header>
+        <mat-panel-title> Inventory Information </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>Re-order Point</mat-label>
+          <input matInput formControlName="rop"  />
+        </mat-form-field>
+      </div>
+    
+       <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>Economic Order Quantity</mat-label>
+          <input matInput formControlName="eoq"  />
+        </mat-form-field>
+      </div>
+       <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>Quantity on Hand</mat-label>
+          <input matInput formControlName="qoh"  />
+        </mat-form-field>
+      </div>
+        <div style="display: flex">
+        <mat-form-field style="width: 90%; margin: auto">
+          <mat-label>Quantity on Order</mat-label>
+          <input matInput formControlName="qoo"  />
+        </mat-form-field>
+      </div>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+<div style="display: flex; width: 90%; margin: auto; margin-top: 1em">
+    <button
+      mat-raised-button
+      type="button"
+      style="color: green"
+      (click)="saved.emit(productForm.value)"
+      [disabled]="!productForm.valid"
+    >
+      Save
+    </button>
+    <span style="flex: 1 1 auto"></span>
+ 
+    <span style="flex: 1 1 auto"></span>
+    <button mat-raised-button type="button" style="color: maroon" (click)="closed.emit()">
+      Close
+    </button>
+  </div>
+</form>

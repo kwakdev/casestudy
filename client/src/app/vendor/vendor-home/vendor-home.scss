@@ -1,0 +1,15 @@
+mat-list-item:nth-child(odd) {
+  background-color: white;
+}
+
+mat-list-item {
+  border-radius: 10px;
+}
+
+.material-icons.addicon {
+  font-size: 15vw;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 10vw;
+}

@@ -1,0 +1,114 @@
+<form [formGroup]="vendorForm">
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" required formControlName="name" />
+      @if (vendorForm.get('name')?.hasError('required')) {
+        <mat-error>Name is required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Address</mat-label>
+      <input matInput type="text" required formControlName="address" />
+      @if (vendorForm.get('address')?.hasError('required')) {
+        <mat-error>Address is required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>City</mat-label>
+      <input matInput type="text" required formControlName="city" />
+      @if (vendorForm.get('city')?.hasError('required')) {
+        <mat-error>City is required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <!-- Province Selector -->
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Province</mat-label>
+      <mat-select required formControlName="province">
+        <mat-option value="AB">[AB] Alberta</mat-option>
+        <mat-option value="BC">[BC] British Columbia</mat-option>
+        <mat-option value="MB">[MB] Manitoba</mat-option>
+        <mat-option value="NB">[NB] New Brunswick</mat-option>
+        <mat-option value="NL">[NL] Newfoundland and Labrador</mat-option>
+        <mat-option value="NS">[NS] Nova Scotia</mat-option>
+        <mat-option value="ON">[ON] Ontario</mat-option>
+        <mat-option value="PE">[PE] Prince Edward Island</mat-option>
+        <mat-option value="QC">[QC] Quebec</mat-option>
+        <mat-option value="SK">[SK] Saskatchewan</mat-option>
+        <mat-option value="YT">[YT] Yukon</mat-option>
+        <mat-option value="NU">[NU] Nunavut</mat-option>
+        <mat-option value="NT">[NT] Northwest Territories</mat-option>
+      </mat-select>
+      @if (vendorForm.get('province')?.hasError('required')) {
+        <mat-error>Province is required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Postal Code</mat-label>
+      <input matInput type="text" required formControlName="postalCode" />
+      @if (vendorForm.get('postalCode')?.hasError('required')) {
+        <mat-error>Postal Code is required</mat-error>
+      }@if (vendorForm.get('postalCode')?.hasError('invalidPostal')) {
+      <mat-error>Format: [a-z][0-9][a-z]-[0-9][a-z][0-9]</mat-error>
+      }
+    </mat-form-field>
+  </div>
+<div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Vendor Type</mat-label>
+      <mat-select required formControlName="type">
+        <mat-option value="Trusted">Trusted</mat-option>
+        <mat-option value="Untrusted">Untrusted</mat-option>
+      </mat-select>
+      @if (vendorForm.get('type')?.hasError('required')) {
+        <mat-error>Vendor type is required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Phone</mat-label>
+      <input matInput type="text" required formControlName="phone" />
+      @if (vendorForm.get('phone')?.hasError('required')) {
+        <mat-error>Phone is required</mat-error>
+      }@if (vendorForm.get('phone')?.hasError('invalidPhone')) {
+      <mat-error>Format: ###-###-####</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-form-field style="width: 90%; margin: auto">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" required formControlName="email" />
+      @if (vendorForm.get('email')?.hasError('required')) {
+        <mat-error>Email is required</mat-error>
+      } @if (vendorForm.get('email')?.hasError('email')) {
+      <mat-error>Format: a@b.c</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <!-- Type Selector -->
+  
+</form>
+
+<div style="display: flex; width: 90%; margin: auto; margin-top: 1em">
+    <button mat-raised-button type="button" style="color: green;" (click)="saved.emit(vendorForm.value)" >Save</button>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-raised-button type="button" style="color: red;" (click)="deleted.emit(vendor().id)">Delete</button>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-raised-button type="button" style="color: maroon;" (click)="closed.emit()">Close</button>
+</div>

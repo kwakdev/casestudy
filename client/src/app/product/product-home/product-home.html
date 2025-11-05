@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    @if (hasProductSelected()) {
+    <mat-card-title align="center" style="margin: 1rem">{{ newProduct() ? `New Product` : `Product Details` }}</mat-card-title>
+ <app-product-details
+    [product]="productInDetail()"
+    (saved)="saveProduct($event)"
+    (closed)="refresh()"
+  ></app-product-details>
+    } @else {
+      <mat-card-title align="center" style="margin: 1rem">Products</mat-card-title>
+      <mat-list dense>
+        @for (product of products(); track $index) {
+          <mat-list-item (click)="selectProduct(product)">
+            {{ product.id }} - {{ product.name }} - {{ product.vendorId }}
+          </mat-list-item>
+        }
+      </mat-list>
+    }
+  </mat-card-content>
+</mat-card>
+@if (!hasProductSelected()) {
+<mat-icon (click)="addNewProduct()" matTooltip="Add New Product" class="addicon" color="primary">
+  control_point
+</mat-icon>
+}

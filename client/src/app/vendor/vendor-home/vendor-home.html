@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    @if (hasVendorSelected()) {
+    <mat-card-title align="center" style="margin: 1rem">{{ newVendor() ? `New Vendor` : `Vendor Details` }}</mat-card-title>
+<app-vendor-details [vendor]="vendorInDetail()" (saved)="updateVendor($event)"       (deleted)="deleteVendor($event)"       (saved)="saveVendor($event)"
+
+/>
+    } @else {
+      <mat-card-title align="center" style="margin: 1rem">Vendors</mat-card-title>
+      <mat-list dense>
+        @for (vendor of vendors(); track $index) {
+          <mat-list-item (click)="selectVendor(vendor)">
+            {{ vendor.id }} - {{ vendor.name }} 
+          </mat-list-item>
+        }
+      </mat-list>
+    }
+  </mat-card-content>
+</mat-card>
+@if (!hasVendorSelected()) {
+<mat-icon (click)="addNewVendor()" matTooltip="Add New Vendor" class="addicon" color="primary">
+  control_point
+</mat-icon>
+}
