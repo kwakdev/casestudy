@@ -1,4 +1,4 @@
-// node_modules/@angular/cdk/fesm2022/scrolling2.mjs
+// ../../node_modules/@angular/cdk/fesm2022/scrolling2.mjs
 var RtlScrollAxisType;
 (function(RtlScrollAxisType2) {
   RtlScrollAxisType2[RtlScrollAxisType2["NORMAL"] = 0] = "NORMAL";
@@ -60,4 +60,4 @@ export {
   supportsScrollBehavior,
   getRtlScrollAxisType
 };
-//# sourceMappingURL=chunk-7UJZXIJQ.js.map
+//# sourceMappingURL=chunk-XZJK3UAB.js.map

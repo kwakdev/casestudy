@@ -88,7 +88,7 @@
             <div align="center">Date</div>
           </th>
           <td mat-cell *matCellDef="let expense">
-            <div align="center">{{ expense.id }}</div>
+            <div align="center">{{ expense.productId }}</div>
           </td>
           <td mat-footer-cell *matFooterCellDef></td>
         </ng-container>
@@ -129,7 +129,22 @@
       </table>
               
     </div>
-
+  <div class="section">
+      <button mat-raised-button type="button" style="color: green" (click)="saveReport()" >
+        Save Report
+      </button>
+    </div>
   }
+             
+    
+
+
+	@if (reportCreatedMessage() != '') {
+      
+    <div class="section">
+      <h3>{{ reportCreatedMessage() }}</h3>
+    </div>
+      
+    }
   </mat-card-content>
 </mat-card>

@@ -1,4 +1,4 @@
-// node_modules/@angular/cdk/fesm2022/css-pixel-value.mjs
+// ../../node_modules/@angular/cdk/fesm2022/css-pixel-value.mjs
 function coerceCssPixelValue(value) {
   if (value == null) {
     return "";
@@ -6,7 +6,7 @@ function coerceCssPixelValue(value) {
   return typeof value === "string" ? value : `${value}px`;
 }
 
-// node_modules/@angular/cdk/fesm2022/coercion.mjs
+// ../../node_modules/@angular/cdk/fesm2022/coercion.mjs
 function coerceBooleanProperty(value) {
   return value != null && `${value}` !== "false";
 }
@@ -15,4 +15,4 @@ export {
   coerceCssPixelValue,
   coerceBooleanProperty
 };
-//# sourceMappingURL=chunk-46HAYV32.js.map
+//# sourceMappingURL=chunk-UPSXSCVF.js.map

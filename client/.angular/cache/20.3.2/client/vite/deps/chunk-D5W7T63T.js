@@ -3,9 +3,9 @@ import {
   setClassMetadata,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-IOCUTRMM.js";
+} from "./chunk-FRKKXN35.js";
 
-// node_modules/@angular/cdk/fesm2022/test-environment.mjs
+// ../../node_modules/@angular/cdk/fesm2022/test-environment.mjs
 function _isTestEnvironment() {
   return (
     // @ts-ignore
@@ -16,7 +16,7 @@ function _isTestEnvironment() {
   );
 }
 
-// node_modules/@angular/cdk/fesm2022/platform.mjs
+// ../../node_modules/@angular/cdk/fesm2022/platform.mjs
 var PlatformModule = class _PlatformModule {
   static ɵfac = function PlatformModule_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _PlatformModule)();
@@ -81,4 +81,4 @@ export {
   _isTestEnvironment,
   getSupportedInputTypes
 };
-//# sourceMappingURL=chunk-3PC4QAEX.js.map
+//# sourceMappingURL=chunk-D5W7T63T.js.map

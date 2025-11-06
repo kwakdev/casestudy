@@ -8,6 +8,6 @@ import { PurchaseOrder } from './purchase-order';
 })
 export class PurchaseOrderService extends HttpApiService<PurchaseOrder> {
   constructor(http: HttpClient) {
-    super(http, 'po');
+    super(http, 'purchase-orders');
   }
 }

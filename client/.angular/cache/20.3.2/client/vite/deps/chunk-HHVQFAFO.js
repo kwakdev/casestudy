@@ -2,9 +2,9 @@ import {
   Injectable,
   setClassMetadata,
   ɵɵdefineInjectable
-} from "./chunk-IOCUTRMM.js";
+} from "./chunk-FRKKXN35.js";
 
-// node_modules/@angular/material/fesm2022/error-state.mjs
+// ../../node_modules/@angular/material/fesm2022/error-state.mjs
 var _ErrorStateTracker = class {
   _defaultMatcher;
   ngControl;
@@ -36,7 +36,7 @@ var _ErrorStateTracker = class {
   }
 };
 
-// node_modules/@angular/material/fesm2022/error-options.mjs
+// ../../node_modules/@angular/material/fesm2022/error-options.mjs
 var ShowOnDirtyErrorStateMatcher = class _ShowOnDirtyErrorStateMatcher {
   isErrorState(control, form) {
     return !!(control && control.invalid && (control.dirty || form && form.submitted));
@@ -81,4 +81,4 @@ export {
   ShowOnDirtyErrorStateMatcher,
   ErrorStateMatcher
 };
-//# sourceMappingURL=chunk-COKWTCWU.js.map
+//# sourceMappingURL=chunk-HHVQFAFO.js.map
