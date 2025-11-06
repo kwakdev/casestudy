@@ -10,13 +10,14 @@ export class HttpApiService<T> {
   }
 
   apiURL(): string {
-    return window.location.hostname == "localhost" ? `http://localhost:8080/api` : "/api"
+    return window.location.hostname === "localhost" ? `http://localhost:8080/api` : "/api";
   }
+
   getAll(): Observable<T[]> {
     return this.http.get<T[]>(`${this.apiURL()}/${this.endPoint}`);
   }
 
-  getById(id: number): Observable<T> {
+  getById(id: string | number): Observable<T> {
     return this.http.get<T>(`${this.apiURL()}/${this.endPoint}/${id}`);
   }
 
@@ -28,10 +29,11 @@ export class HttpApiService<T> {
     return this.http.put<T>(`${this.apiURL()}/${this.endPoint}`, data);
   }
 
-   delete(id: string): Observable<number> {
+  delete(id: string | number): Observable<number> {
     return this.http.delete<number>(`${this.apiURL()}/${this.endPoint}/${id}`);
   }
-    getAllById(id: number): Observable<T[]> {
+
+  getAllById(id: string | number): Observable<T[]> {
     return this.http.get<T[]>(`${this.apiURL()}/${this.endPoint}/${id}`);
   }
 }

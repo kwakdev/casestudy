@@ -21,7 +21,7 @@ export class ProductDetails implements OnInit {
 
   saved = output<Product>();
   closed = output<void>();
-  deleted = output<number>();
+  deleted = output<string>();
 
   productForm: FormGroup = new FormGroup({
     id: new FormControl(''),
